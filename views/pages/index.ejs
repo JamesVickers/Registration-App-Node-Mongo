@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="en"> 
+
+    <head>
+        <% include ../partials/head %>
+    </head>
+
+    <body>
+
+        <header>
+            <% include ../partials/header %>
+        </header>
+            
+        <main>
+            <h2>Hello, nice to meet you!</h2>
+            <form method="post" action="/" id="regForm">
+                <label>Please enter your details here</label>
+                <input type="text" name="firstName" placeholder="Enter first name..." required>
+                <input type="text" name="lastName" placeholder="Enter last name..." required>
+            </form>
+            <button type="submit" form="regForm" value="Submit" id="submitButton">Submit</button>
+        </main>
+        
+        <footer>
+            <% include ../partials/footer %>
+        </footer>
+
+    </body>
+
+</html>
