@@ -6,6 +6,8 @@ const app = express();
 const path = require('path');
 const router = express.Router();
 
+// set location for static files like .css
+app.use(express.static(__dirname + '/public'))
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -25,7 +27,7 @@ app.get('/list', (req, res) => {
       if (err) return console.log(err)
 
       // renders index.ejs
-      res.render('pages/list.ejs', {registers: result})
+      res.render('pages/list', {registers: result})
     })
   })
 

@@ -17,14 +17,10 @@
 
             
             <ul>
-                <% for(var i=0; i<registers.length; i++) {%>
-                  <li>
-                    <span><%= registers[i].firstName %></span>
-                    <span><%= registers[i].lastName %></span>
-                    <span><%= registers[i].entryTime %></span>
-                  </li>
-                <% } %>
-                </ul>
+                    <% registers.forEach(function(person){ %>
+                <li><%= person.firstName %> <%= person.lastName %> <%= person.entryTime %></li>
+                    <% }) %>
+            </ul>
             
        
         </main>
