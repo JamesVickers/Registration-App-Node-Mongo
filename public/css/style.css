@@ -1,4 +1,75 @@
 body {
-    background-color: lightgray;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    background-color: #fff;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
   }
   
+header,
+footer {
+  height: 20%;
+  border: 2px solid lightgray;
+}
+
+main {
+  height: 60%;
+  border: 2px solid lightgray;
+}
+
+.main-flex {
+  height: 100%;
+  border: 2px solid lightslategray;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1, 
+h2,
+h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2,
+label {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+h3,
+button {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.name-flex {
+  display: flex;
+  width: fit-content;
+}
+
+.name-flex,
+button {
+  margin: 3% auto 0 auto;
+}
+
+button {
+  width: fit-content;
+  padding: 15px 35px;
+  background: #6acac5;
+  border: none;
+}
+
+input {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}

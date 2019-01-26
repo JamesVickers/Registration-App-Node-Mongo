@@ -14,14 +14,21 @@
         </header>
             
         <main>
-            <h2>Hello</h2>
-            <form method="post" action="/enter" id="regForm">
-                <label>Please add your name to the fire register</label>
-                <input type="text" name="firstName" placeholder="..first name.." required>
-                <input type="text" name="lastName" placeholder="..last name.." required>
-            </form>
-            <button type="submit" form="regForm" value="Submit" id="submitButton">Submit</button>
-            <button><a href="/">Go back to home page</a></button>
+            <div class="main-flex">
+                <form method="post" action="/enter" id="regForm">
+                    <label>Please register your visit here</label>
+                    <div class="name-flex">
+                        <h3>First Name:</h3>
+                        <input type="text" name="firstName" placeholder="..." required>
+                    </div>
+                    <div class="name-flex">
+                        <h3>Last Name:</h3>
+                        <input type="text" name="lastName" placeholder="..." required>
+                    </div>
+                </form>
+                <button type="submit" form="regForm" value="Submit" id="submitButton">Submit</button>
+                <button onclick="location.href='/'">Go back to home page</button>
+            </div>
         </main>
         
         <footer>

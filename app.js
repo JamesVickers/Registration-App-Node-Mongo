@@ -64,12 +64,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-/*
-const mongo = require('mongodb');
-const mongoose = require("mongoose"); ***KEEP*
-const db = mongoose.connection;
-*/
-
 //Set up default mongoose connection
 var mongoDB = 'mongodb://localhost:27017/SigmaData';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
@@ -107,7 +101,6 @@ app.post('/enter', (req, res) => {
 });
 
 // on /exit form submission, remove entry from db collection then redirect to /exit-success.ejs 
-
 app.post('/exit', (req, res) => {
     //console.log(req.body);
     visitorModel.deleteOne( { 'firstName': req.body.firstName, 'lastName': req.body.lastName }, function (err, registers) {
@@ -115,7 +108,6 @@ app.post('/exit', (req, res) => {
         res.redirect('/exit-success');
     });
 });
-
 
 
 
