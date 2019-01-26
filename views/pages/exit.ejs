@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+    <head>
+        <% include ../partials/head %>
+    </head>
+
+    <body>
+
+        <header>
+            <% include ../partials/header %>
+        </header>
+            
+        <main>
+            <h2>Goodbye</h2>
+            <form method="post" action="/exit" id="regForm">
+                <label>Please remove your name to the fire register</label>
+                <input type="text" name="firstName" placeholder="..first name.." required>
+                <input type="text" name="lastName" placeholder="..last name.." required>
+            </form>
+            <button type="submit" form="regForm" value="Submit" id="submitButton">Submit</button>
+            <button><a href="/">Go back to home page</a></button>
+        </main>
+        
+        <footer>
+            <% include ../partials/footer %>
+        </footer>
+
+    </body>
+
+</html>
