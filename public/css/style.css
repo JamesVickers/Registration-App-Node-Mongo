@@ -3,25 +3,48 @@ body {
     font-size: 16px;
     height: 100vh;
     background-color: #fff;
-    border: 2px solid lightgray;
     display: flex;
     flex-direction: column;
   }
   
+.header-flex,
+.footer-flex {
+  height: 100%;
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-flex {
+  border-bottom: 1px solid #dad9d7;
+}
+
+.footer-flex {
+  border-top: 1px solid #dad9d7;
+}
+
 header,
 footer {
-  height: 20%;
-  border: 2px solid lightgray;
+  height: 10%;
+}
+
+img {
+  max-width: 148px;
+  max-height: 43px; 
+  /*
+  width: 296px;
+  height: 86px;
+  */
 }
 
 main {
-  height: 60%;
-  border: 2px solid lightgray;
+  height: 80%;
 }
 
 .main-flex {
-  height: 100%;
-  border: 2px solid lightslategray;
+  width: 80%;
+  margin: 20% 10% 0 10%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -34,42 +57,88 @@ h3 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 1.8em;
 }
 
 h2,
 label {
-  font-size: 1.8em;
+  font-size: 1.25em;
   margin: 0;
 }
 
 h3,
 button {
   margin: 0;
-  font-size: 1.3em;
+}
+
+.enter-exit-btn-flex {
+  display: flex;
+  justify-content: space-around;
 }
 
 .name-flex {
   display: flex;
   width: fit-content;
+  align-items: center;
+}
+
+.name-flex:first-of-type {
+  margin: 20% auto 0 auto;
 }
 
 .name-flex,
 button {
-  margin: 3% auto 0 auto;
+  margin: 10% auto 0 auto;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+input:focus {
+  border: none;
+  box-shadow: 0 0 15px 1px  #6acac5;
 }
 
 button {
   width: fit-content;
-  padding: 15px 35px;
+  padding: 10px 30px;
   background: #6acac5;
   border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #5aa8a4;
+}
+
+.name-flex h3 {
+  color: #54565a;
+  margin-right: 10px;
 }
 
 input {
   text-align: center;
+  padding: 5px;
+}
+
+.go-back-btn {
+  margin: 20% auto 0 auto;
+}
+
+.thank-you {
+  margin-top: 5%;
 }
 
 ul {
   list-style-type: none;
+  margin: 10% auto 0 auto;
+}
+
+li {
+  margin-top: 5px;
+  font-size: 0.8em;
 }
