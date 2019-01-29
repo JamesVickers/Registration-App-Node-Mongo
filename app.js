@@ -45,6 +45,11 @@ app.get('/exit-success', function(req, res) {
     res.render('pages/exit-success');
 });
 
+// Oops page
+app.get('/oops', function(req, res) {
+    res.render('pages/oops');
+});
+
 // list page 
 app.get('/list', (req, res) => {
     //list page queries db for all results and passes results to list.ejs in 'registers' variable
@@ -74,13 +79,18 @@ mongoose.Promise = global.Promise;
 //Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+//Added the following 'mongoose.set' to remove this console warning:
+//(node:3916) DeprecationWarning: collection.ensureIndex is deprecated. Use createIndexes instead.
+//mongoose.set('useCreateIndex', true)
+
 //Define a schema
 var Schema = mongoose.Schema;
 
 var visitorSchema = new Schema({
     firstName: String,
     lastName: String,
-    entryTime: {type: Date, default: Date.now}
+    entryTime: {type: Date, default: Date.now},
+   // createDate:  { type: Date, expires: '10s' }
 });
 
 // Compile model from schema
@@ -97,18 +107,21 @@ app.post('/enter', (req, res) => {
     .catch(err => {
         res.status(400).send('unable to save to database');
     });
-    
 });
 
 // on /exit form submission, remove entry from db collection then redirect to /exit-success.ejs 
 app.post('/exit', (req, res) => {
     //console.log(req.body);
-    visitorModel.deleteOne( { 'firstName': req.body.firstName, 'lastName': req.body.lastName }, function (err, registers) {
+    visitorModel.deleteOne( { 'firstName': req.body.firstName, 'lastName': req.body.lastName }, function (err, response) {
         if (err) return handleError(err);
+       // response contains { n: 1, ok: 1 }
+       if (response.n > 0) {
         res.redirect('/exit-success');
+       } else {
+        res.redirect('/oops');
+       }
     });
 });
-
 
 
 // listen on port 3000
@@ -116,12 +129,5 @@ app.listen(process.env.port || 3000);
 
 
 /*
-
-setTimeout(function () {
-    // if (entry time date === (Date.now() - 1 day)) 
-    // db.collection.remove()
-}, 10000)
-
- https://docs.mongodb.com/v3.2/reference/method/db.collection.remove/#db.collection.remove
-
+Set TTL on each entry so that they expire.
 */
