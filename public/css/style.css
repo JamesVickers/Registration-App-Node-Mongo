@@ -43,7 +43,7 @@ main {
 }
 
 .main-flex {
-  margin: 60px 10% 0 10%;
+  margin: 200px 10% 0 10%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -56,30 +56,29 @@ h3 {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 3.5em;
 }
 
-h2,
-label {
-  font-size: 1.2em;
+h2 {
+  font-size: 3em;
   margin: 0;
 }
 
 h3,
-button {
+label {
   margin: 0;
-  font-size: 0.95em;
+  font-size: 2.3em;
 }
 
 .enter-exit-btn-flex {
   margin: 0 auto;
   width: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .enter-exit-btn-flex button {
-  margin: 60px auto 0 auto;
+  margin-top: 150px;
 }
 
 .name-flex {
@@ -89,21 +88,21 @@ button {
 }
 
 .name-flex:first-of-type {
-  margin: 60px auto 0 auto;
+  margin: 150px auto 0 auto;
 }
 
-.name-flex,
-button {
-  margin: 30px auto 0 auto;
+.name-flex {
+  margin: 75px auto 0 auto;
 }
 
 .name-flex h3 {
   color: #54565a;
-  margin-right: 8px;
-  font-size: 0.95em;
+  margin-right: 12px;
+  font-size: 2em;
 }
 
 input {
+  font-size: 2em;
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: center;
@@ -117,8 +116,9 @@ input:focus {
 }
 
 button {
+  font-size: 2em;
   width: fit-content;
-  padding: 10px 30px;
+  padding: 15px 20px;
   background: #6acac5;
   border: none;
   border-radius: 5px;
@@ -129,8 +129,13 @@ button:hover {
   background-color: #5aa8a4;
 }
 
-.go-back-btn {
-  margin: 60px auto 0 auto;
+.submit-btn {
+  margin: 75px auto 0 auto;
+
+}
+.go-back-btn,
+.try-again-btn {
+  margin: 150px auto 0 auto;
 }
 
 .thank-you {
@@ -144,102 +149,18 @@ ul {
 
 li {
   margin-top: 5px;
-  font-size: 0.8em;
+  font-size: 1.9em;
 }
 
 /* Media queries ******************************************************************************************/
 
-@media screen and (min-width: 700px) {
-  .enter-exit-btn-flex {
-    width: 75%;
-    margin: 0 12.5% 0 12.5%;
-  }
-}
-
 @media screen and (min-width: 725px) {
   .enter-exit-btn-flex {
-    width: 70%;
-    margin: 0 15% 0 15%;
+    width: 50%
   }
-}
-
-@media screen and (min-width: 750px) {
-  .enter-exit-btn-flex {
-    width: 65%;
-    margin: 0 17.5% 0 17.5%;
-  }
-}
-
-@media screen and (min-width: 775px) {
-  .enter-exit-btn-flex {
-    width: 60%;
-    margin: 0 20% 0 20%;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .enter-exit-btn-flex {
-    width: 55%;
-    margin: 0 22.5% 0 22.5%;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .enter-exit-btn-flex {
-    width: 50%;
-    margin: 0 25% 0 25%;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .enter-exit-btn-flex {
-    width: 45%;
-    margin: 0 27.5% 0 27.5%;
-  }
-  h2,
-label {
-  font-size: 1.4em;
-}
-
-h3,
-button,
-.name-flex h3 {
-  font-size: 1em;
-}
-.name-flex h3 {
-  margin-right: 9px;
-}
-  li {
-    font-size: 0.9em;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .enter-exit-btn-flex {
-    width: 40%;
-    margin: 0 30% 0 30%;
-  }
-  h2,
-label {
-  font-size: 1.5em;
-}
-
-h3,
-button,
-.name-flex {
-  font-size: 1.1em;
-}
-.name-flex h3 {
-  margin-right: 10px;
-}
-  li {
-    font-size: 1em;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .enter-exit-btn-flex {
-    width: 35%;
-    margin: 0 32.5% 0 32.5%;
+  .name-flex:first-of-type,
+  .go-back-btn,
+  .try-again-btn {
+    margin: 100px auto 0 auto;
   }
 }
