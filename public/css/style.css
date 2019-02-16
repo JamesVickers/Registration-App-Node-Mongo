@@ -70,6 +70,7 @@ label {
   font-size: 2.3em;
 }
 
+
 .enter-exit-btn-flex {
   margin: 0 auto;
   width: 80%;
@@ -138,6 +139,8 @@ button:hover {
   margin: 150px auto 0 auto;
 }
 
+.intro-text,
+.enjoy-text,
 .thank-you {
   margin-top: 30px;
 }
