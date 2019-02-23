@@ -165,6 +165,7 @@ button:hover {
 
 ul {
   list-style-type: none;
+  padding: 0;
   margin: 30px auto 0 auto;
 }
 
@@ -184,4 +185,59 @@ li {
   .try-again-btn {
     margin: 100px auto 0 auto;
   }
+}
+
+@media screen and (min-width: 1000px) {
+  .main-flex {
+  margin: 150px 10% 0 10%;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  h3,
+  label,
+  button,
+  input,
+  .name-flex h3 {
+    font-size: 1.3em;
+  }
+
+  .intro-text:last-of-type {
+    margin-top: 15px;
+  }
+
+  .enter-exit-btn-flex {
+    width: 30%
+  }
+
+.enter-exit-btn-flex button {
+  margin-top: 80px;
+}
+
+button {
+  padding: 10px 15px;
+}
+
+.name-flex:first-of-type,
+  .go-back-btn,
+  .try-again-btn {
+    margin: 60px auto 0 auto;
+  }
+
+.name-flex,
+.submit-btn {
+  margin: 30px auto 0 auto;
+}
+
+li {
+  font-size: 1.3em;
+}
+
 }
