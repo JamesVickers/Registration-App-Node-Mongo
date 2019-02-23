@@ -87,8 +87,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 var Schema = mongoose.Schema;
 
 var visitorSchema = new Schema({
-    firstName: String,
-    lastName: String,
+    firstName: { type: String, lowercase: true },
+    lastName: { type: String, lowercase: true },
     entryTime: {type: Date, default: Date.now},
    // createDate:  { type: Date, expires: '10s' }
 });
@@ -112,8 +112,7 @@ app.post('/enter', (req, res) => {
 
 // on /exit form submission, remove entry from db collection then redirect to /exit-success.ejs 
 app.post('/exit', (req, res) => {
-    //console.log(req.body);
-    visitorModel.deleteOne( { 'firstName': req.body.firstName, 'lastName': req.body.lastName }, function (err, response) {
+    visitorModel.deleteOne( { 'firstName': req.body.firstName.toLowerCase(), 'lastName': req.body.lastName.toLowerCase() }, function (err, response) {
         if (err) return handleError(err);
        // response contains { n: 1, ok: 1 }
        if (response.n > 0) {
