@@ -97,6 +97,7 @@ var visitorSchema = new Schema({
 var visitorModel = mongoose.model('Register', visitorSchema );
 var visitorModelInstance;
 
+
 // on /enter form submission, save entry to db collection then redirect to /enter-success.ejs 
 app.post('/enter', (req, res) => {
     visitorModelInstance = new visitorModel(req.body);
@@ -123,11 +124,23 @@ app.post('/exit', (req, res) => {
     });
 });
 
+// Database purging at midnight every day *************************************************************************
 
+// TTL does not work with mongoose, so setTimeout function used instead.
+//setHours(24,0,0,0) is next midnight. setHours(24,0,0,0) is last midnight.
+var timeOfDeletion = new Date().setHours(24,00,0,0) - Date.now(); // next midnight
+
+setTimeout(function()
+    {
+        db.dropCollection("registers", function (err, result) {
+            if (err) {
+                console.log("error delete collection");
+            } else {
+                console.log("delete collection success");
+            }
+        })
+    }, timeOfDeletion);
+
+    
 // listen on port 3000
 app.listen(process.env.port || 3000);
-
-
-/*
-Set TTL on each entry so that they expire.
-*/
