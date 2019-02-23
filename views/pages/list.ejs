@@ -18,7 +18,7 @@
 
                 <ul>
                         <% registers.forEach(function(person){ %>
-                    <li><%= person.firstName %> <%= person.lastName %> - <%= person.entryTime %></li>
+                    <li><%= person.firstName %> <%= person.lastName %> - <%= person.entryTime.toLocaleString() %></li>
                         <% }) %>
                 </ul>
                 
