@@ -29,6 +29,23 @@ footer {
   height: 10%;
 }
 
+header,
+footer {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
+
+header {
+  top: 0;
+  left: 0;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+}
+
 img {
   max-width: 148px;
   max-height: 43px; 
@@ -43,7 +60,8 @@ main {
 }
 
 .main-flex {
-  margin: 200px 10% 0 10%;
+  margin: 250px 10% 0 10%;
+  padding-bottom: 150px;
   display: flex;
   flex-direction: column;
   text-align: center;
