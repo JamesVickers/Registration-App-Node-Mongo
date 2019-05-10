@@ -47,8 +47,14 @@ footer {
 }
 
 img {
+  max-width: 180px;
+  max-height: 80px; 
+}
+
+/*img {
   max-width: 148px;
   max-height: 43px; 
+  */
   /*
   width: 296px;
   height: 86px;
