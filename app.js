@@ -71,7 +71,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Set up default mongoose connection
 var mongoDB = 'mongodb://localhost:27017/SigmaData';
-mongoose.connect(process.env.MONGO_URL || mongoDB, { useNewUrlParser: true });
+var cosmosDB = 'mongodb://sigma-registration-app-db.documents.azure.com:443/';
+mongoose.connect(process.env.MONGO_URL || cosmosDB || mongoDB, { useNewUrlParser: true });
 
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
