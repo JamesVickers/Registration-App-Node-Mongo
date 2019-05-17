@@ -71,9 +71,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Set up default mongoose connection
 var mongoDB = 'mongodb://localhost:27017/SigmaData';
-var cosmosDB = 'mongodb://sigma-registration-app-db:RTZw4y1Zi1PnCaOaxbfXUD9HfoGq3qOIfTuoqH7GXgxC93ZENSioKZJp44ILYsm3eRIvhVDtNfeCy2LfI3trTw==@sigma-registration-app-db.documents.azure.com:10255/?ssl=true';
+//var cosmosDB = 'mongodb://sigma-registration-app-db:RTZw4y1Zi1PnCaOaxbfXUD9HfoGq3qOIfTuoqH7GXgxC93ZENSioKZJp44ILYsm3eRIvhVDtNfeCy2LfI3trTw==@sigma-registration-app-db.documents.azure.com:10255/?ssl=true';
 
-mongoose.connect(process.env.MONGO_URL || cosmosDB || mongoDB, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_URL || mongoDB, { useNewUrlParser: true });
 
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
