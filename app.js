@@ -74,6 +74,7 @@ var mongoDB = 'mongodb://localhost:27017/SigmaData';
 //var cosmosDB = 'mongodb://sigma-registration-app-db:RTZw4y1Zi1PnCaOaxbfXUD9HfoGq3qOIfTuoqH7GXgxC93ZENSioKZJp44ILYsm3eRIvhVDtNfeCy2LfI3trTw==@sigma-registration-app-db.documents.azure.com:10255/?ssl=true';
 
 mongoose.connect(process.env.MONGO_URL || mongoDB, { useNewUrlParser: true });
+mongoose.connection.on('error', console.error.bind(console, 'Mongo error:'));
 
 // Get Mongoose to use the global promise library
 mongoose.Promise = global.Promise;
