@@ -9,30 +9,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-header {
-  border-bottom: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 main {
-  height: 80%;
-  margin: 0 5%;
+  height: 100%;
+  color: #fff;
   text-align: center;
+  background: url(../img/pattern_section_bg_prussian_access.svg) no-repeat;
+  background-size: cover;
 }
 
-footer {
-  border-top: 1px solid #f2f2f2;
+header {
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header,
 footer {
   height: 10%;
-  border-bottom: 1px solid #dad9d7;
-  margin: 0 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 header img {
