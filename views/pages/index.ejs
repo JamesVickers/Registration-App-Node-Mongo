@@ -1,33 +1,24 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
 
-    <head>
-        <% include ../partials/head %>
-    </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
 
-    <body>
+    <main>
+        <div class="index-start-div" onclick="location.href='/option'">
+          <h2>Welcome to Sigma's fire register</h2>
+          <h3>Please tap here to start your journey</h3>
+        </div>
+      </div>
+    </main>
 
-        <header>
-            <% include ../partials/header %>
-        </header>
-            
-        <main>
-            <div class="main-flex">
-                
-                <h2>Welcome to Sigma</h2>
-                <h3 class="intro-text">Please sign in for fire safety reasons.</h3>
-                <h3 class="intro-text">Your data will be deleted after you sign out.</h3>
-                <div class="enter-exit-btn-flex">
-                    <button onclick="location.href='/enter'">Arrive</button> 
-                    <button onclick="location.href='/exit'">Leave</button>
-                </div>
-            </div>
-        </main>
-        
-        <footer>
-            <% include ../partials/footer %>
-        </footer>
-
-    </body>
-
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
 </html>

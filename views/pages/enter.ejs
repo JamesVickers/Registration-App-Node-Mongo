@@ -1,40 +1,42 @@
-
-
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
 
-    <head>
-        <% include ../partials/head %>
-    </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
 
-    <body>
+    <main>
+      <form method="post" action="/enter" id="regForm">
+        <label>Please register your visit here</label>
+        <div class="name-input-flex">
+          <h3>First Name:</h3>
+          <input type="text" name="firstName" placeholder="..." required />
+        </div>
+        <div class="name-input-flex">
+          <h3>Last Name:</h3>
+          <input type="text" name="lastName" placeholder="..." required />
+        </div>
+      </form>
+      <button
+        class="submit-btn"
+        type="submit"
+        form="regForm"
+        value="Submit"
+        id="submitButton"
+      >
+        Submit
+      </button>
+      <button onclick="location.href='/'">
+        Back to home
+      </button>
+    </main>
 
-        <header>
-            <% include ../partials/header %>
-        </header>
-            
-        <main>
-            <div class="main-flex">
-                <form method="post" action="/enter" id="regForm">
-                    <label>Please register your visit here</label>
-                    <div class="name-flex">
-                        <h3>First Name:</h3>
-                        <input type="text" name="firstName" placeholder="..." required>
-                    </div>
-                    <div class="name-flex">
-                        <h3>Last Name:</h3>
-                        <input type="text" name="lastName" placeholder="..." required>
-                    </div>
-                </form>
-                <button class="submit-btn" type="submit" form="regForm" value="Submit" id="submitButton">Submit</button>
-                <button class="go-back-btn" onclick="location.href='/'">Back to home</button>
-            </div>
-        </main>
-        
-        <footer>
-            <% include ../partials/footer %>
-        </footer>
-
-    </body>
-
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
 </html>

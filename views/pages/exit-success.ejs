@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
 
-    <head>
-        <% include ../partials/head %>
-    </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
 
-    <body>
+    <main>
+      <h3>Thank you, you have now left the building.</h3>
+      <h3>We hope you enjoyed your visit.</h3>
+      <button onclick="location.href='/'">
+        Back to home
+      </button>
+    </main>
 
-        <header>
-            <% include ../partials/header %>
-        </header>
-            
-        <main>
-            <div class="main-flex">
-                <h3>Thank you, you have now left the building.</h3>
-                <button class="go-back-btn" onclick="location.href='/'">Back to home</button> 
-            </div>
-        </main>
-        
-        <footer>
-            <% include ../partials/footer %>
-        </footer>
-
-    </body>
-
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
 </html>

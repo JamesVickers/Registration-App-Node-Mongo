@@ -1,27 +1,18 @@
+html,
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 16px;
-    height: 100vh;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-  }
-  
-.header-flex,
-.footer-flex {
   height: 100%;
-  margin: 0 5%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 
-.header-flex {
-  border-bottom: 1px solid #dad9d7;
-}
-
-.footer-flex {
-  border-top: 1px solid #dad9d7;
+main {
+  height: 80%;
 }
 
 header,
@@ -29,98 +20,36 @@ footer {
   height: 10%;
 }
 
-header,
 footer {
-  position: fixed;
-  width: 100%;
-  background: #fff;
+  border-top: 1px solid #dad9d7;
 }
 
-header {
-  top: 0;
-  left: 0;
-}
-
-footer {
-  bottom: 0;
-  left: 0;
-}
-
-img {
-  max-width: 180px;
-  max-height: 80px; 
-}
-
-/*img {
-  max-width: 148px;
-  max-height: 43px; 
-  */
-  /*
-  width: 296px;
-  height: 86px;
-  */
-}
-
-main {
-  height: 80%;
-}
-
-.main-flex {
-  margin: 250px 10% 0 10%;
-  padding-bottom: 150px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-h1, 
-h2,
-h3 {
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 3.5em;
-}
-
-h2 {
-  font-size: 3em;
-  margin: 0;
-}
-
-h3,
-label {
-  margin: 0;
-  font-size: 2.3em;
-}
-
-
-.enter-exit-btn-flex {
-  margin: 0 auto;
-  width: 80%;
+.header-flex-div {
+  height: 100%;
+  border-bottom: 1px solid #dad9d7;
+  margin: 0 5%;
   display: flex;
   justify-content: space-between;
-}
-
-.enter-exit-btn-flex button {
-  margin-top: 150px;
-}
-
-.name-flex {
-  display: flex;
-  width: fit-content;
   align-items: center;
 }
 
-.name-flex:first-of-type {
-  margin: 150px auto 0 auto;
+header img {
+  width: 220px;
+  height: 70px;
 }
 
-.name-flex {
+.name-input-flex {
+  display: flex;
+  width: fit-content;
+  align-items: center;
   margin: 75px auto 0 auto;
 }
 
-.name-flex h3 {
+.name-input-flex:first-of-type {
+  margin: 150px auto 0 auto;
+}
+
+.name-input-flex h3 {
   color: #54565a;
   margin-right: 12px;
   font-size: 2em;
@@ -137,7 +66,7 @@ input {
 
 input:focus {
   border: none;
-  box-shadow: 0 0 15px 1px  #6acac5;
+  box-shadow: 0 0 15px 1px #6acac5;
 }
 
 button {
@@ -154,96 +83,18 @@ button:hover {
   background-color: #5aa8a4;
 }
 
-.submit-btn {
-  margin: 75px auto 0 auto;
-
-}
-.go-back-btn,
-.try-again-btn {
-  margin: 150px auto 0 auto;
-}
-
-.intro-text,
-.enjoy-text,
-.thank-you {
-  margin-top: 30px;
-}
-
 ul {
   list-style-type: none;
-  padding: 0;
-  margin: 30px auto 0 auto;
 }
 
 li {
   margin-top: 5px;
-  font-size: 1.9em;
 }
 
 /* Media queries ******************************************************************************************/
 
 @media screen and (min-width: 725px) {
-  .enter-exit-btn-flex {
-    width: 50%
-  }
-  .name-flex:first-of-type,
-  .go-back-btn,
-  .try-again-btn {
-    margin: 100px auto 0 auto;
-  }
 }
 
 @media screen and (min-width: 1000px) {
-  .main-flex {
-  margin: 150px 10% 0 10%;
-  }
-
-  h1 {
-    font-size: 2.5em;
-  }
-  
-  h2 {
-    font-size: 2em;
-    margin: 0;
-  }
-  
-  h3,
-  label,
-  button,
-  input,
-  .name-flex h3 {
-    font-size: 1.3em;
-  }
-
-  .intro-text:last-of-type {
-    margin-top: 15px;
-  }
-
-  .enter-exit-btn-flex {
-    width: 30%
-  }
-
-.enter-exit-btn-flex button {
-  margin-top: 80px;
-}
-
-button {
-  padding: 10px 15px;
-}
-
-.name-flex:first-of-type,
-  .go-back-btn,
-  .try-again-btn {
-    margin: 60px auto 0 auto;
-  }
-
-.name-flex,
-.submit-btn {
-  margin: 30px auto 0 auto;
-}
-
-li {
-  font-size: 1.3em;
-}
-
 }

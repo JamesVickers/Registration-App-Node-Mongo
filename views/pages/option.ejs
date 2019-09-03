@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ../partials/head %>
+  </head>
+
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+
+    <main>
+        <h3>Please sign in for fire safety reasons.</h3>
+        <h3>
+          Your data will be deleted after you sign out.
+        </h3>
+        <h3>
+          Are you arriving or leaving?
+        </h3>
+        <div class="enter-exit-btn-flex">
+          <button onclick="location.href='/enter'">Arrive</button>
+          <button onclick="location.href='/exit'">Leave</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
+</html>
